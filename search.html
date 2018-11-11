@@ -1,0 +1,80 @@
+---
+layout: page
+title: Search Results
+---
+
+{% include read-config.liquid %}
+
+<hr/>
+
+<div id="searchResultsDiv"></div>
+
+<script type="text/javascript">
+    "use strict";
+    var whenDocumentReady = whenDocumentReady || function() {};
+    var whenSearchTermsReady = function() {
+        var searchText = decodeURIComponent(QueryString["txtSearch"] || "").split("+").join(" ");
+        if(searchText) {
+            $("#txtSearch").val(searchText);
+
+            // TODO: Hack to fix double render. Ajax or document.ready is being called twice.
+            $("#searchResultsDiv").text("");
+
+            var visitedUrls = [];
+            $.each(typeaheadHandler.getData(searchText), function(index, post) {
+                if(post && post.url && visitedUrls.indexOf(post.url) >= 0) return;
+
+                var regex = new RegExp(searchText, "gi");
+                var div = $("<div/>");
+                var header = null;
+                var excerpt = null;
+                var tags = null;
+
+                if(post.title) {
+                    var title = $("<div/>").html(post.title).text();
+                    header = $("<h3/>")
+                            .css("font-weight", "bold")
+                            .html(title.replace(regex, "<span class='searchHit'>$&</span>"));
+                } else {
+                    header = $("<h3/>")
+                            .css("font-weight", "bold")
+                            .text("{Title Unknown}");
+                }
+                var date = $("<span/>");
+                if(post.date) {
+                    date = $("<p/>")
+                        .css("font-weight","bold")
+                        .text(new Date(post.date.substr(0,10)).toString().substr(0,15));
+                }
+                if(post.excerpt) {
+                    excerpt = $("<p/>")
+                            .html(post.excerpt.replace(regex, "<span class='searchHit'>$&</span>"));
+                }
+                if(post.tags) {
+                    var tagsText = post.tags.split(",").sort().join(", ");
+                    tags = $("<p/>")
+                            .html("<b>Tags:</b> " + tagsText.replace(regex, "<span class='searchHit'>$&</span>"));
+                }
+                var link = $("<p/>").html("<a href='" + post.url + "'>View " +
+                        (post.isPost ? "Post" : "Page") +
+                        " &raquo;</a>");
+                $("#searchResultsDiv").append($("<div/>")
+                        .append(header  || $("<span/>"))
+                        .append(date    || $("<span/>"))
+                        .append(excerpt || $("<span/>"))
+                        .append(tags    || $("<span/>"))
+                        .append(link)
+                );
+
+                visitedUrls.push(post.url);
+            });
+        }
+    };
+</script>
+
+<!-- --------------- -->
+<!-- Edit the `metadata.copyright` value in the `_jekyllfaces/config.md` file to suit your needs. -->
+<!-- --------------- -->
+
+<hr/>
+{{ config.metadata.copyright | markdownify }}

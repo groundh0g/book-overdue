@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% include read-config.liquid %}
+<html lang='{{ page.lang | default: config.metadata.lang | default: site.lang | default: "en" }}'>
+
+  {% include html/head.html %}
+
+  <body>
+
+    {% include html/header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper container">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include html/footer.html %}
+
+{% if config.search.content %}
+  <script src='{{ "/assets/script/jekyllfaces/search.js" | relative_url }}'></script>
+{% endif %}
+
+  </body>
+
+</html>
