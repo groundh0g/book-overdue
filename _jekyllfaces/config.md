@@ -1,7 +1,7 @@
 ---
 
 metadata:
-  title: Leanpub-Jekyll
+  title: Overdue Diligence
   tagline: Share your WIP. Publish often.
   description: > # Description for the site ...
     Inspired by JekyllBootstrap [plusjade/jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap){:target="_blank"}, JekyllFaces [groundh0g/jekyllfaces](https://github.com/groundh0g/jekyllfaces){:target="_blank"}
