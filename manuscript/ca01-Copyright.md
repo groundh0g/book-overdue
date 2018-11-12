@@ -1,12 +1,13 @@
 ---
 title: Copyright
+showTitle: false
 status: draft # placeholder | stub | draft | edit | done
 lastReviewedOn: 2018-11-11
 ---
 
 # Copyright
 
-Published by Hiive Books (a subsidiary of Hiive, LLC), 2014.  
+Published by Hiive Books (a subsidiary of Hiive, LLC), 2018.  
 P.O. Box 9, Loachapoka, Alabama 36865-0009.  
 Telephone: 334 239 3117 (US), 020 8123 2097 (UK).  
 http://www.hiivebooks.com/

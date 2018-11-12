@@ -1,6 +1,7 @@
 ---
 title: Foreword
-status: stub # placeholder | stub | draft | edit | done
+showTitle: false
+status: draft # placeholder | stub | draft | edit | done
 lastReviewedOn: 2018-11-11
 ---
 

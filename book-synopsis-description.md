@@ -1,4 +1,4 @@
-### Bobo: Against the Pod
+### Overdue Diligence
 
 In a world where dogs and cats intermarry, it's not so unusual for Bobo the whale to fall in love with a dolphin. At
 least they're not separated by the shoreline. They do, however, have to contend with the overzealous captain of the
