@@ -17,7 +17,7 @@ All rights reserved.
 
 Printed in the United States of America.
 
-## PUBLISHER’S NOTE
+## Publisher's Note
 
 This book is a work of fiction. Names, characters, places, and incidents are either the product of the author’s imagination or are used fictitiously. Any resemblance to persons, living or dead, businesses, events, or locales is entirely coincidental.
 

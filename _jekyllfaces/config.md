@@ -13,27 +13,15 @@ metadata:
     #website:      # http://{metadata.title}.com when blank
     #jurisdiction: # e.g. Georgia, "United States" when blank
   lang: en
-
   copyright: Powered by [leanpub-jekyll](https://github.com/groundh0g/leanpub-jekyll). All content &copy; [Joseph Barrett Hall](http://joehall.net) ([@groundh0g](https://twitter.com/groundh0g)).
 
 customize:
-  theme: journal       # one of: cerulean | cosmo | cyborg | darkly | default | flatly | journal | litera | lumen | lux | materia | minty | pulse | sandstone | simplex | sketchy | slate | solar | spacelab | superhero | united | yeti
+  theme: flatly       # one of: cerulean | cosmo | cyborg | darkly | default | flatly | journal | litera | lumen | lux | materia | minty | pulse | sandstone | simplex | sketchy | slate | solar | spacelab | superhero | united | yeti
   http404: sticky     # one of: badge | default | dog | droids | glass | link | milk | monster | potty | shrug | sticky | tweet | zork
-  #css: [ "main.css" ] # array of stylesheets to load after other styles
-  #js:  [ "main.js"  ] # array of javascripts to load after other scripts
-  #homepage: custom    # one of: books | contributors | custom | docs | landing | legal | soon | webapps
 
 build:
   use_cdn:      true # use CDN for 3rd-party scripts and styles?
   search:       true # create search index?
-
-  #books:        true # process book content?
-  #docs:         true # process documentation content?
-  #landing:      true # process landing page content?
-  #soon:         true # process coming soon content?
-  #webapps:      true # process webapps content? (the overviews, not the webapp(s) itself)
-  #legal:        true # process legal content?
-  #contributors: true # process contributors content?
 
 navbar:
   fixed:         true # sticky navbar?
@@ -79,35 +67,16 @@ navbar:
             targ: _blank
             desc: The GitHub project for this book.
 
-  ###search:       true # include search box in navbar (rightmost element)
-  #books:        true # include link to books overview? {build.books} when blank
-  #docs:         true # include link to docs overview? {build.docs} when blank
-  #webapps:      true # include link to webapps overview? {build.webapps} when blank
-  #legal:        true # include link to legal content overview? {build.legal} when blank
-  #contributors: true # include link to contributors page? {build.contributors} when blank
-  #pages:        true # include all other page content?
-
 search:
   content:      full # one of: false | full | excerpt
-  ignore:       [ ".css", ".js", ".json", ".xml", "/404.html", "/custom.html", "/status.html", "/book-copyright.html", "/search.html" ]
-  #groups:       [ "/content/contributors/", "/content/legal/" ]
-  strip_chars:  "|'.,:;!?├─└…()[]#-/“”{}’"
+  ignore:       [ ".css", ".js", ".json", ".xml", "/404.html", "/custom.html", "/status.html", "/book-copyright.html", "/search.html", "/site.webmanifest" ]
+  strip_chars:  "|'.,:;!?├─└…()[]#-/“”{}	’"
   strip_quote:  true
   titles:       true # search titles from pages and posts?
   tags:         true # search post tags?
   pages:        true # search all page content?
   posts:        true # search all post content?
-
-  #books:        true # search all book content? {build.books} when blank
-  #docs:         true # search all docs content? {build.docs} when blank
-  #landing:      true # search landing page content? {build.landing} when blank
-  #soon:         true # search coming soon page content? {build.soon} when blank
-  #webapps:      true # search webapps overview content? {build.webapps} when blank
-  #legal:        true # search legal content? {build.legal} when blank
-  #contributors: true # search contributors page? {build.contributors} when blank
-
-  ## map content pages to hosting pages (the editable files to the display files)
-  pagemaps:
+  pagemaps:     ## map content pages to hosting pages (the editable files to the display files)
     book-author-bio: book-author
     book-manuscript-chapters: book-manuscript
     book-synopsis-description: book-synopsis
