@@ -1,5 +1,5 @@
-ca00-Preface.md
-ca01-Copyright.md
+ca00-Copyright.md
+ca01-Preface.md
 ca02-Foreword.md
 ca03-Acknowledgements.md
 ch01.md

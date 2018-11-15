@@ -1,8 +1,8 @@
 ---
-title: Copyright
+#title: Copyright
 showTitle: false
 status: draft # placeholder | stub | draft | edit | done
-lastReviewedOn: 2018-11-11
+lastReviewedOn: 2018-11-12
 ---
 
 # Copyright
