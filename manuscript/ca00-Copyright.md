@@ -1,4 +1,5 @@
 ---
+layout: chapter
 #title: Copyright
 showTitle: false
 status: draft # placeholder | stub | draft | edit | done
