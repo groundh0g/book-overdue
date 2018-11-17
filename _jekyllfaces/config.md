@@ -97,7 +97,7 @@ analytics:
 
 comments:
   provider: facebook # one of: false | facebook | disqus | intensedebate | duoshuo
-  siteid: 0000000000000000
+  siteid: 192808807437152
 
 # --- JekyllFaces Metadata ---
 
