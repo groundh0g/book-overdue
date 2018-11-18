@@ -163,7 +163,7 @@ search:
 
 ### Comments
 
-To emable comments on your chapters and other pages, you'll need to select a comment provider and specify the provider-provided ID that was assigned to you. You set these values in the `_jekyllfaces/config.md` file.
+To enable comments on your chapters and other pages, you'll need to select a comment provider and specify the provider-provided ID that was assigned to you. You set these values in the `_jekyllfaces/config.md` file.
 
 ~~~
 comments:
@@ -178,6 +178,17 @@ baseurl: "/leanpub-jekyll" # the subpath of your site, e.g. /blog
 url: "https://groundh0g.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 ~~~
 
-## Coming Soon
+### Analytics
 
-Analytics are being implemented next. Stay tuned!
+To enable analytics on your pages, you'll need to select an analytics provider and specify the provider-provided ID that was assigned to you. You set these values in the `_jekyllfaces/config.md` file.
+
+~~~
+analytics:
+  provider: false # one of: false | google | matomo | getclicky | mixpanel | gauges 
+  siteid: UA-0000000-00
+  baseurl: # only used by matomo; ex: mysite.com/piwik
+~~~
+
+## Feature Requests and Bug Fixes
+
+That's about all there is to tell. If you have a feature that you would like added, or if you find a problem with the existing code, please [open an issue and tell us about it](https://github.com/groundh0g/leanpub-jekyll/issues).

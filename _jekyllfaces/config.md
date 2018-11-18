@@ -63,7 +63,7 @@ navbar:
         divider-2: true
         source:
             text: <span><i class="fa fa-github"></i> Source</span>
-            href: https://github.com/groundh0g/leanpub-jekyll
+            href: https://github.com/groundh0g/book-overdue
             targ: _blank
             desc: The GitHub project for this book.
 
@@ -91,8 +91,8 @@ fonticons:
   octicons:    false # one of: false | local | cdn
 
 analytics:
-  provider: false # one of: false | google | matomo | getclicky | mixpanel | gauges 
-  siteid: UA-0000000-00
+  provider: google # one of: false | google | matomo | getclicky | mixpanel | gauges 
+  siteid: UA-3294285-3
   baseurl: # only used by matomo; ex: mysite.com/piwik
 
 comments:
