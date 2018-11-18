@@ -13,7 +13,7 @@ metadata:
     #website:      # http://{metadata.title}.com when blank
     #jurisdiction: # e.g. Georgia, "United States" when blank
   lang: en
-  copyright: Powered by [leanpub-jekyll](https://github.com/groundh0g/leanpub-jekyll){:target="_blank"}. All content &copy; [Joseph Barrett Hall](http://joehall.net){:target="_blank"} ([@groundh0g](https://twitter.com/groundh0g){:target="_blank"}).
+  copyright: Powered by [leanpub-jekyll](https://github.com/groundh0g/leanpub-jekyll){:target="_blank"}. All content &copy; [Joseph Barrett Hall](http://joehall.net){:target="_blank"} ([@groundh0g](https://twitter.com/groundh0g){:target="_blank"}). Subscribe to the blog [here](/book-overdue/feed.xml).
 
 customize:
   theme: flatly       # one of: cerulean | cosmo | cyborg | darkly | default | flatly | journal | litera | lumen | lux | materia | minty | pulse | sandstone | simplex | sketchy | slate | solar | spacelab | superhero | united | yeti

@@ -7,7 +7,9 @@ title: Home
 
 Welcome to the website for my book-in-progress. The most recent blog posts are listed below. To see a list of all blog posts, please see [The Archive](archive.html).
 
-<div class="parallax-window" style="min-height:200px;" data-parallax="scroll" data-image-src='{{ "/assets/images/book-single-scroll.jpg" | relative_url }}'></div><br/>
+<!-- <div class="parallax-window" style="min-height:200px;" data-parallax="scroll" data-image-src='{{ "/assets/images/book-single-scroll.jpg" | relative_url }}'></div><br/> -->
+
+<div style="width:100%; height:200px; background-image: url('./assets/images/book-single-scroll.jpg'); background-repeat: no-repeat; background-position: -420px -250px;">&nbsp;</div>
 
 {% for post in site.posts limit:5 %}
 
