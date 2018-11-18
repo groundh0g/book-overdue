@@ -15,25 +15,26 @@ The [Jekyll](https://jekyllrb.com/) plumbing has been added to wrap the `manuscr
 
 ## Techie Tweaks
 
-Leanpub-jekyll adds the following pages / features to your manuscript project in Github:
+Leanpub-jekyll adds the following pages and features to your manuscript project in Github:
 
 * The `/index.md` file to generates the landing page for your site.
-* The `manuscript/book-manuscript.md` file to stitches the book's chapters together into a single web page.
+* The `/book-manuscript.md` file to stitches the book's chapters together into a single web page.
 * I renamed the chapter files from `*.txt` to `*.md` and updated the references to same within the `Book.txt` file.
 * I added YAML headers to each chapter. These help the site display separate chapters as separate web pages (e.g. when navigating via search), and that header should be safely ignored by the Leanpub publishing process.
 * I added a fourth chapter with "lorem ipsum" text as a placeholder to help showcase the statistics page (at `/book-statistics.md`). The content of the chapter files doesn't matter. You'll replace all four chapters with your own text, and add new chapters after that.
-* I created a bogus, completely unrelated, book cover to show alongside the synopsis (in `/book-synopsis.md`). Consider it a placeholder for you to swap out with your own cover.
+* I created a bogus, completely unrelated, book cover (at `/manuscript/images/cover.png`) to show alongside the synopsis (in `/book-synopsis.md`). Consider it a placeholder for you to swap out with your own cover.
 
 ## Blogging
 
-This is a standard Jekyll site. Blog posts are created a separate files in the `_posts` folder. For more information on creating blog posts in Jekyll, see the [official documentation](https://jekyllrb.com/docs/posts/), or check out the example posts that come with this project.
+This is a standard Jekyll site. Blog posts are created as separate files in the `_posts` folder. For more information on creating blog posts in Jekyll, see the [official documentation](https://jekyllrb.com/docs/posts/), or check out the example posts that come with this project.
 
 ## Configuration - Jekyll
 
-Jekyll is typically configured by entries in the `_config.yml` file. This project moves almost all of that configuration data to the `_jekyllfaces\config.md` file. There's one exception, though. It was cleaner to leave the `baseurl` setting (the subpath) in the `_config.yml` file. That's because Jekyll has filters that help with formatting page URLs that rely on that setting.
+Jekyll is typically configured by entries in the `_config.yml` file. This project moves almost all of that configuration data to the `_jekyllfaces/config.md` file. There are two exceptions, though. It was cleaner to leave the `baseurl` setting (the subpath) and `url` setting (the protocol and hostname) in the `_config.yml` file. That's because Jekyll has filters that help with formatting page URLs that rely on those settings.
 
 ~~~
 baseurl: "/leanpub-jekyll" # the subpath of your site, e.g. /blog
+url: "https://groundh0g.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 ~~~
 
 If your site isn't hosted at the root, you'll need to set the `baseurl` value accordingly.
@@ -160,6 +161,23 @@ search:
     book-synopsis-description: book-synopsis
 ~~~
 
+### Comments
+
+To emable comments on your chapters and other pages, you'll need to select a comment provider and specify the provider-provided ID that was assigned to you. You set these values in the `_jekyllfaces/config.md` file.
+
+~~~
+comments:
+  provider: facebook # one of: false | facebook | disqus | intensedebate | duoshuo
+  siteid: 0000000000000000
+~~~
+
+**NOTE:** For Facebook comments (and possibly others), you'll also need to specify your `baseurl` and `url` settings in the `_config.yml` file.
+
+~~~
+baseurl: "/leanpub-jekyll" # the subpath of your site, e.g. /blog
+url: "https://groundh0g.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+~~~
+
 ## Coming Soon
 
-Analytics and comments are being implemented next. Stay tuned!
+Analytics are being implemented next. Stay tuned!
